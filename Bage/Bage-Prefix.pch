@@ -1,0 +1,50 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+//
+#import "DefineFunction.h"
+
+#import "IphoneScreen.h"
+//添加通用工具类
+#import "ToolsClass.h"
+//添加类目方法
+#import "UIViewController+Addtions.h"
+
+
+//xmpp
+#import "XMPPDefines.h"
+
+
+#define UIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+//安全释放
+#define kSafeRelease(object) [object release],object = nil
+
+//ios7.0 与ios6.0的导航栏高度
+#define HightOfNavigationbarInIOS7 (([[[UIDevice currentDevice]systemVersion] compare:@"7.0"]  == NSOrderedDescending)?60.0f:0.0f)
+
+#define kColor1 [UIColor colorWithRed:113/255.0f green:174/255.0f blue:145/255.0f alpha:0.8f]
+#define kColor2 [UIColor colorWithRed:214/255.0f green:233/255.0f blue:195/255.0f alpha:0.8f]
+#define kColor3 [UIColor colorWithRed:150/255.0f green:208/255.0f blue:182/255.0f alpha:0.8f]
+
+//#define kPageCount [[array lastObject] count]
+#define kPageWidth 45.0f
+#define kPageHeight 300.0f
+

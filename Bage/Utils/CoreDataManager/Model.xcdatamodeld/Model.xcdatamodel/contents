@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Match" representedClassName="Match" syncable="YES">
+        <attribute name="mp_create_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mp_host_jid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mp_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mp_partner_jid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mp_runtime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mp_topic_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mp_topic_type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MemberPoints" representedClassName="MemberPoints" syncable="YES">
+        <attribute name="m_jid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mp_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="mp_experience" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="mp_lastTime" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mp_star" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="memberInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Members" inverseName="pointList" inverseEntity="Members" syncable="YES"/>
+    </entity>
+    <entity name="Members" representedClassName="Members" syncable="YES">
+        <attribute name="m_Jid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="m_Lv" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="m_stars" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="pointList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MemberPoints" inverseName="memberInfo" inverseEntity="MemberPoints" syncable="YES"/>
+    </entity>
+    <entity name="Topic" representedClassName="Topic" syncable="YES">
+        <attribute name="t_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="t_created_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="t_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="t_image_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="t_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="t_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="t_writer" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MemberPoints" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Members" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Match" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Topic" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

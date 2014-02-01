@@ -1,0 +1,13 @@
+PODS:
+  - JDStatusBarNotification (1.4.6)
+  - MMProgressHUD (0.2.1)
+
+DEPENDENCIES:
+  - JDStatusBarNotification
+  - MMProgressHUD
+
+SPEC CHECKSUMS:
+  JDStatusBarNotification: 5b82f86faf5fe60a5fff0663e5bcd3380112c2cf
+  MMProgressHUD: f06dddddbf9345e60618f2fac6375f31a10965db
+
+COCOAPODS: 0.29.0

@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Bage
+
+  Created by Duger on 13-12-26.
+  Copyright (c) 2013年 Duger. All rights reserved.
+*/
+
+
+
+//key      value
+"First" = "First";
+"Second" = "Second";
